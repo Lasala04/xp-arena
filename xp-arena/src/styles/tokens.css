@@ -1,0 +1,189 @@
+/* XP Arena design tokens.
+   Brand from the pitch deck: ink #16141F, cream #F4F1E8, violet #5236E0, Bricolage Grotesque.
+   Style: Vibrant & Block-based (ui-ux-pro-max, "Trivia & Quiz Game"): solid edges, a hard ledge shadow,
+   bold color blocks. Every text/background pair below was checked at 4.5:1 or better. */
+
+:root {
+  /* brand primitives (fixed in every theme) */
+  --ink: #16141f;
+  --ink-2: #211e2e;
+  --ink-3: #2d2940;
+  --cream: #f4f1e8;
+  --paper: #fffdf8;
+  --violet: #5236e0;
+  --violet-2: #6c55f2;
+  --violet-3: #8b74ff;
+  --coral: #f2545b;
+  --teal: #12a594;
+  --amber: #e9a23b;
+  --gold: #f2b544;
+
+  /* answer blocks: fill, text on the fill, soft tint for the pastel card theme */
+  --ans-violet: var(--violet);
+  --ans-violet-on: #fff;
+  --ans-violet-soft: #e6e1fb;
+  --ans-coral: var(--coral);
+  --ans-coral-on: var(--ink);
+  --ans-coral-soft: #fde3e4;
+  --ans-teal: var(--teal);
+  --ans-teal-on: var(--ink);
+  --ans-teal-soft: #d7f3ef;
+  --ans-amber: var(--amber);
+  --ans-amber-on: var(--ink);
+  --ans-amber-soft: #fcefd8;
+
+  /* type */
+  --font: 'Bricolage Grotesque', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fs-xs: 13px; /* uppercase labels only */
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 18px;
+  --fs-xl: 22px;
+  --fs-2xl: 28px;
+  --fs-3xl: 36px;
+  --fs-4xl: 48px;
+
+  /* spacing (4/8 rhythm) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --gutter: clamp(16px, 4vw, 48px);
+
+  /* shape */
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+  --bw: 2px;
+
+  /* motion */
+  --dur-fast: 140ms;
+  --dur: 220ms;
+  --dur-slow: 420ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* layering */
+  --z-bar: 10;
+  --z-emote: 50;
+  --z-toast: 100;
+}
+
+/* ---- light theme (default) ---- */
+:root,
+.scheme-light {
+  --bg: var(--cream);
+  --surface: var(--paper);
+  --surface-2: #eae5d6;
+  --text: var(--ink);
+  --text-muted: #58546a;
+  --border: rgba(22, 20, 31, 0.14);
+  --edge: var(--ink);
+  --block: var(--ink);
+  --track: rgba(22, 20, 31, 0.1);
+  --inverse-bg: var(--ink);
+  --inverse-fg: var(--cream);
+
+  --primary: var(--violet);
+  --primary-hover: var(--violet-2);
+  --on-primary: #fff;
+  --primary-soft: #e6e1fb;
+  --primary-text: var(--violet);
+  --term: var(--violet);
+  --ring: var(--violet);
+
+  --success: var(--teal);
+  --success-soft: #d7f3ef;
+  --success-text: #0a6e62;
+  --danger: var(--coral);
+  --danger-soft: #fde3e4;
+  --danger-text: #b3232c;
+  --warn-soft: #fff3d6;
+  --warn-text: #7a4f00;
+  --warn-edge: #f2d690;
+  --highlight: color-mix(in oklab, var(--amber) 55%, transparent);
+
+  --shadow-soft: 0 18px 40px -20px rgba(22, 20, 31, 0.35);
+  color-scheme: light;
+}
+
+/* ---- dark theme: the projector always, phone screens when the device asks for it ---- */
+.page--ink,
+.scheme-dark {
+  --bg: var(--ink);
+  --surface: var(--ink-2);
+  --surface-2: var(--ink-3);
+  --text: var(--cream);
+  --text-muted: #aba6bc;
+  --border: rgba(244, 241, 232, 0.12);
+  --edge: #4f4868;
+  --block: #050408;
+  --track: rgba(244, 241, 232, 0.12);
+  --inverse-bg: var(--cream);
+  --inverse-fg: var(--ink);
+
+  --primary: var(--violet);
+  --primary-hover: var(--violet-2);
+  --on-primary: #fff;
+  --primary-soft: rgba(108, 85, 242, 0.22);
+  --primary-text: #b4a8ff;
+  --term: #c4b9ff;
+  --ring: #a99bff;
+
+  --success: var(--teal);
+  --success-soft: rgba(18, 165, 148, 0.18);
+  --success-text: #5fe0cd;
+  --danger: var(--coral);
+  --danger-soft: rgba(242, 84, 91, 0.18);
+  --danger-text: #ff9da1;
+  --warn-soft: rgba(242, 181, 68, 0.16);
+  --warn-text: #f5c76e;
+  --warn-edge: rgba(242, 181, 68, 0.4);
+  --highlight: rgba(242, 181, 68, 0.22);
+
+  --shadow-soft: 0 24px 60px -24px rgba(0, 0, 0, 0.7);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* body too, so overscroll and the area outside the app match */
+  body,
+  .page--cream {
+    --bg: var(--ink);
+    --surface: var(--ink-2);
+    --surface-2: var(--ink-3);
+    --text: var(--cream);
+    --text-muted: #aba6bc;
+    --border: rgba(244, 241, 232, 0.12);
+    --edge: #4f4868;
+    --block: #050408;
+    --track: rgba(244, 241, 232, 0.12);
+    --inverse-bg: var(--cream);
+    --inverse-fg: var(--ink);
+
+    --primary-soft: rgba(108, 85, 242, 0.22);
+    --primary-text: #b4a8ff;
+    --term: #c4b9ff;
+    --ring: #a99bff;
+
+    --success-soft: rgba(18, 165, 148, 0.18);
+    --success-text: #5fe0cd;
+    --danger-soft: rgba(242, 84, 91, 0.18);
+    --danger-text: #ff9da1;
+    --warn-soft: rgba(242, 181, 68, 0.16);
+    --warn-text: #f5c76e;
+    --warn-edge: rgba(242, 181, 68, 0.4);
+    --highlight: rgba(242, 181, 68, 0.22);
+
+    --shadow-soft: 0 24px 60px -24px rgba(0, 0, 0, 0.7);
+    color-scheme: dark;
+  }
+}

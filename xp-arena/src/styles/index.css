@@ -1,0 +1,10 @@
+/* XP Arena styles, in cascade order: tokens → base → components → screens → motion. */
+@import './tokens.css';
+@import './base.css';
+@import './components.css';
+@import './screens/home.css';
+@import './screens/host.css';
+@import './screens/play.css';
+@import './screens/locker.css';
+@import './screens/record.css';
+@import './motion.css';

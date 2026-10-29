@@ -1,0 +1,15 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Saved player profiles and the class record (local to each machine)
+xp-arena/data/
+
+# Local tool settings
+.claude/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
